@@ -1,0 +1,15 @@
+.doodles-page {
+
+    height: 100vh;
+    width: 85%;
+    @include center-div;
+    float: right;
+
+    background-color: $color2;
+
+    &__doodles-title {
+        font-size: 5rem;
+        margin-top: 100px;
+        color: $color1;
+    }
+}

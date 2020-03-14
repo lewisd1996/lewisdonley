@@ -1,0 +1,197 @@
+.photography-page {
+
+    min-height: 100vh;
+    width: 85%;
+    @include center-div;
+    float: right;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: relative;
+
+    background-color: $color2;
+
+    &__photography-title {
+        font-size: 5rem;
+        margin-top: 50px;
+        color: $color1;
+        margin-bottom: 50px;
+    }
+}
+
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    column-gap: 20px;
+    row-gap: 20px;
+    padding: 30px;
+
+    &__box {
+    position: relative;
+    
+
+    &:hover &__info{
+        opacity: 100;
+        transition: opacity 0.5s;
+    }
+
+        &__info {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            height: 100%;
+            width: 100%;
+            position: absolute;
+            background-color: rgba( $color1, .9);
+            opacity: 0;
+            border-radius: 25px;
+            cursor: zoom-in;
+            
+            h1 {
+                font-size: 2.8rem;
+                color: $color2;
+            }
+
+            p{
+                font-size: 1.4rem;
+                color: $color2;
+            }
+
+
+        }
+
+    }
+
+    img {
+        width: 100%;
+        height: 100%;
+        border-radius: 25px;
+    }
+}
+
+.overlay {
+    background-color: rgba(0, 0, 0, 0.8);
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    opacity: 0;
+    pointer-events: none;
+
+    &__active {
+        opacity: 100;
+        pointer-events: all;
+        transition: all .5s;
+    }
+
+    &__image-popout {
+        opacity: 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        height: 100vh;
+        width: 100%;
+        pointer-events: none;
+        
+
+        &__active {
+            opacity: 100;
+            pointer-events: all;
+            transition: all .5s;
+        }
+
+        &__image-wrapper {
+            position: relative;
+
+            &__close-button {
+                position: absolute;
+                font-size: 5rem;
+                font-weight: bold;
+                text-decoration: none;
+
+                border: none;
+                z-index: 100;
+                right: -90px;
+                cursor: pointer;
+                opacity: 0;
+
+
+                &__active {
+                    opacity: 100;
+                    transition: all .5s;
+                }
+            }
+
+            &__image {
+                
+                &__1 {
+                    content:url($image1);
+                    max-height: 900px;
+                    max-width: 500px;
+                    transform: scale(1.2);
+                }
+
+                &__2 {
+                    content:url($image2);
+                    max-height: 900px;
+                    max-width: 500px;
+                    transform: scale(1.2);
+                }
+
+                &__3 {
+                    content:url($image3);
+                    max-height: 900px;
+                    max-width: 500px;
+                    transform: scale(1.2);
+                }
+
+                &__4 {
+                    content:url($image4);
+                    max-height: 900px;
+                    max-width: 500px;
+                    transform: scale(1.2);
+                }
+                
+
+                &__5 {
+                    content:url($image5);
+                    max-height: 900px;
+                    max-width: 500px;
+                    transform: scale(1.2);
+                }
+
+                &__6 {
+                    content:url($image6);
+                    max-height: 900px;
+                    max-width: 500px;
+                    transform: scale(1.2);
+                }
+
+                &__7 {
+                    content:url($image7);
+                    max-height: 900px;
+                    max-width: 500px;
+                    transform: scale(1.2);
+                }
+
+                &__8 {
+                    content:url($image8);
+                    max-height: 900px;
+                    max-width: 500px;
+                    transform: scale(1.2);
+                }
+
+                &__9 {
+                    content:url($image9);
+                    max-height: 900px;
+                    max-width: 500px;
+                    transform: scale(1.2);
+                }
+            }
+        }
+    }
+}
+

@@ -1,0 +1,37 @@
+.nav-bar {
+
+    position: fixed;
+    background: $color1;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, $color1, rgb(32, 32, 32));  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, $color1, rgb(32, 32, 32)); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    height: 100vh;
+    width: 15%;
+    z-index: 100;
+    
+   
+    &__list {
+        height: 100%;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items:  center;
+        list-style: none;
+        background-color: transparent;
+        
+        
+        &__li {
+            color: $color2;
+            display: none;
+
+            &:active {
+                background-color: $colour-red;
+            }
+        }
+    }
+
+}
+
+.nav-link {
+    pointer-events: none
+}

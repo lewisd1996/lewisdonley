@@ -1,0 +1,32 @@
+.landing-page {
+
+    height: 100vh;
+    width: 85%;
+    @include center-div;
+    float: right;
+    background: $color2;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #FFFFFF, $color2);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #FFFFFF, $color2); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+
+    &__name-title {
+        font-size: 10rem;
+        margin-top: 350px;
+        color: $color1;
+        font-weight: bold;
+    }
+
+    &__job-title {
+        font-size: 3rem;
+        margin-top: 25px;
+        color: $color1;
+        font-weight: bold;
+    }
+
+    &__scroll-to-top-btn {
+    height: 90vh;
+    position: fixed;
+    left: 90%;
+    margin-top: 80px;
+    }
+}

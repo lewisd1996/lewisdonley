@@ -1,0 +1,16 @@
+.cv-page {
+
+    height: 100vh;
+    width: 85%;
+    @include center-div;
+    @include scroll-snap-align-start;
+    float: right;
+
+    background-color: $color2;
+
+    &__cv-title {
+        font-size: 5rem;
+        margin-top: 100px;
+        color: $color1;
+    }
+}

@@ -1,0 +1,41 @@
+html {
+  scroll-snap-type: y mandatory;
+}
+
+* {
+    font-size: 10px;
+    padding: 0;
+    margin: 0;
+    scroll-behavior: smooth;
+    box-sizing: border-box;
+}
+
+.background-div::after {
+  content: "";
+  opacity: 0.5;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  position: absolute;
+  z-index: -1;   
+  /* Full height */
+  height: 100%;
+  /* Create the parallax scrolling effect */
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.background-div-green {
+  background-color: $color3;
+  position: absolute;
+  width: 100vh;
+  height: 100vh;
+  z-index: -100;
+}
+
+.active-link {
+  color: $color4;
+}
